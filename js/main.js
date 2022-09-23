@@ -43,7 +43,7 @@
             
             $('html, body').animate({
                 scrollTop: $(this.hash).offset().top - 0
-            }, 1500, 'easeInOutExpo');
+            }, 15, 'easeInOutExpo');
         }
     });
     
@@ -68,7 +68,7 @@
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
 
-    // document.addEventListener('contextmenu', event => event.preventDefault());
+    document.addEventListener('contextmenu', event => event.preventDefault());
 
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
@@ -89,7 +89,7 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({scrollTop: 0}, 15, 'easeInOutExpo');
         return false;
     });
 })(jQuery);
