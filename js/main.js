@@ -68,7 +68,7 @@
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
 
-    document.addEventListener('contextmenu', event => event.preventDefault());
+    // document.addEventListener('contextmenu', event => event.preventDefault());
 
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
