@@ -85,7 +85,7 @@
 }
 
 .back-to-top i:hover {
-  color: var(--dark);
+  color: var(--primary);
 }
 
 .back-to-top {
@@ -115,6 +115,12 @@
 
 .title {
   position: relative;
+}
+.name-text {
+  font-family: 'Dancing Script';font-size: 52px;
+}
+.title-text {
+  font-size: 20px;
 }
 
 .title::before {
