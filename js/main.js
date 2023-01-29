@@ -96,14 +96,15 @@
 
 function sendContact() {
 	var valid;	
-    console.log("helooooooooooo")
+    console.log("helooooooooooo", valid)
 	valid = validateContact();
 	if(valid) {
 		jQuery.ajax({
-		url: "contact_mail.php",
+		url: "./contact_mail.php",
 		data:'userName='+$("#userName").val()+'&userEmail='+$("#userEmail").val()+'&subject='+$("#subject").val()+'&content='+$(content).val(),
 		type: "POST",
 		success:function(data){
+            console.log(data, "success")
 		$("#mail-status").html(data);
 		},
 		error:function (){}
