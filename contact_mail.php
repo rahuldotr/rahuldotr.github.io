@@ -1,9 +1,21 @@
 <?php
-$toEmail = "rahuldotrnair@gmail.com";
-$mailHeaders = "From: " . $_POST["userName"] . "<". $_POST["userEmail"] .">\r\n";
-if(mail($toEmail, $_POST["subject"], $_POST["content"], $mailHeaders)) {
-print "<p class='success'>Contact Mail Sent.</p>";
-} else {
-print "<p class='Error'>Problem in Sending Mail.</p>";
+if (isset($_REQUEST['name'],$_REQUEST['email'])) {
+      
+    $name = $_REQUEST['name'];
+    $email = $_REQUEST['email'];
+    $message = $_REQUEST['message'];
+      
+    // Set your email address where you want to receive emails. 
+    $to = 'rahuldotrnair@gmail.com';
+      
+    $subject = 'Contact Request From Website';
+    $headers = "From: ".$name." <".$email."> \r\n";
+      
+    $send_email = mail($to,$subject,$message,$headers);
+      
+    echo ($send_email) ? 'success' : 'error';
+      
 }
 ?>
+
+

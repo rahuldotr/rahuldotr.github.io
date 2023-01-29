@@ -31,6 +31,42 @@
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
     </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+
+    <script>
+
+        $(document).ready(function() {
+            $('.myform').on('submit',function(){
+                
+                // Add text 'loading...' right after clicking on the submit button. 
+                $('.output_message').text('Loading...'); 
+                
+                var form = $(this);
+                $.ajax({
+                    url: form.attr('action'),
+                    method: form.attr('method'),
+                    data: form.serialize(),
+                    success: function(result){
+                        if (result == 'success'){
+                            $('.output_message').text('Message Sent!');  
+                        } else {
+                            $('.output_message').text('Error Sending email!');
+                        }
+                    }
+                });
+                
+                // Prevents default submission of the form after clicking on the submit button. 
+                return false;   
+            });
+        });
+    </script>
+
+
+
+
+
+
 
     <body>
         <!-- Spinner Start -->
@@ -387,34 +423,35 @@
                     <section class="py-5 wow fadeInUp" data-wow-delay="0.1s" id="contact">
                         <h1 class="title pb-3 mb-5">Contact Me</h1>
 						<div id="mail-status"></div>
-                        <form>
+                        <form method="post" class="myform" action="process-form.php">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0 bg-secondary" name="userName" id="userName" placeholder="Your Name">
+                                        <input type="text" class="form-control border-0 bg-secondary" name="name" placeholder="Your Name">
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0 bg-secondary" name="userEmail" id="userEmail" placeholder="Your Email">
+                                        <input type="email" class="form-control border-0 bg-secondary" name="email" placeholder="Your Email">
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0 bg-secondary" name="subject" id="subject" placeholder="Subject">
+                                        <input type="text" class="form-control border-0 bg-secondary" name="subject" placeholder="Subject">
                                         <label for="subject">Subject</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control border-0 bg-secondary" placeholder="Leave a message here" name="content" id="content" style="height: 200px"></textarea>
+                                        <textarea class="form-control border-0 bg-secondary" placeholder="Leave a message here" name="message"  style="height: 200px"></textarea>
                                         <label for="message">Message</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btnAction" onClick="sendContact();" name="submit">Send Message</button>
+                                    <button class="btn btn-primary w-100 py-3" type="submit" name="send" value="send">Send Message</button>
+                                    <span class="output_message"></span>
                                 </div>
                             </div>
                         </form>

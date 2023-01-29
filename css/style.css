@@ -122,6 +122,10 @@
 .title-text {
   font-size: 20px;
 }
+.output_message {
+  margin-top: 20px;
+  color: var(--primary);
+}
 
 .title::before {
   position: absolute;
