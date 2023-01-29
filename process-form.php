@@ -1,21 +1,28 @@
 <?php
-if (isset($_REQUEST['name'],$_REQUEST['email'])) {
-      
-    $name = $_REQUEST['name'];
-    $email = $_REQUEST['email'];
-    $message = $_REQUEST['message'];
-      
-    // Set your email address where you want to receive emails. 
-    $to = 'rahuldotrnair@gmail.com';
-      
-    $subject = 'Contact Request From Website';
-    $headers = "From: ".$name." <".$email."> \r\n";
-      
-    $send_email = mail($to,$subject,$message,$headers);
-      
-    echo ($send_email) ? 'success' : 'error';
-      
+if (isset($_POST["submit"])) {
+    // Checking For Blank Fields..
+    if ($_POST["name"] == "" || $_POST["email"] == "" || $_POST["subject"] == "" || $_POST["message"] == "") {
+        echo "Fill All Fields..";
+    } else {
+        // Check if the "Sender's Email" input field is filled out
+        $email = $_POST['email'];
+        // Sanitize E-mail Address
+        $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+        // Validate E-mail Address
+        $email = filter_var($email, FILTER_VALIDATE_EMAIL);
+        if (!$email) {
+            echo "Invalid Sender's Email";
+        } else {
+            $subject = $_POST['subject'];
+            $message = $_POST['message'];
+            $headers = 'From:' . $email2 . "rn"; // Sender's Email
+            $headers .= 'Cc:' . $email2 . "rn"; // Carbon copy to Sender
+// Message lines should not exceed 70 characters (PHP rule), so wrap it
+            $message = wordwrap($message, 70);
+            // Send Mail By PHP Mail Function
+            mail("rahuldotrnair@gmail.com", $subject, $message, $headers);
+            echo "Your mail has been sent successfuly ! Thank you for your feedback";
+        }
+    }
 }
 ?>
-
-
