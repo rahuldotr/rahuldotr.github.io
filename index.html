@@ -34,40 +34,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
 
-    <script>
-
-        $(document).ready(function() {
-            $('.myform').on('submit',function(){
-                
-                // Add text 'loading...' right after clicking on the submit button. 
-                $('.output_message').text('Loading...'); 
-                
-                var form = $(this);
-                $.ajax({
-                    url: form.attr('action'),
-                    method: form.attr('method'),
-                    data: form.serialize(),
-                    success: function(result){
-                        if (result == 'success'){
-                            $('.output_message').text('Message Sent!');  
-                        } else {
-                            $('.output_message').text('Error Sending email!');
-                        }
-                    }
-                });
-                
-                // Prevents default submission of the form after clicking on the submit button. 
-                return false;   
-            });
-        });
-    </script>
-
-
-
-
-
-
-
     <body>
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -113,7 +79,7 @@
                                 <span class="fw-medium text-primary">Birthday:</span> 24 June 1997
                             </div>
                             <div class="col-sm-6 py-1">
-                                <span class="fw-medium text-primary">Degree:</span> Computer Science Engineering
+                                <span class="fw-medium text-primary">Degree:</span> B Tech Computer Science and Engineering
                             </div>
                             <div class="col-sm-6 py-1">
                                 <span class="fw-medium text-primary">Experience:</span> 2.8 Years
