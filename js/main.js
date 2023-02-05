@@ -92,4 +92,10 @@
         $('html, body').animate({scrollTop: 0}, 15, 'easeInOutExpo');
         return false;
     });
+
+    const img = document.querySelector('img')
+    img.ondragstart = () => {
+        return false;
+    };
+
 })(jQuery);
