@@ -245,3 +245,9 @@
   padding:1em;
   white-space:nowrap;
 }
+
+.profile-image {
+  /* border-radius: 70% !important;
+  width: 100% !important;
+  height: 55% !important; */
+}

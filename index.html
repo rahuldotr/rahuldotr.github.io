@@ -27,7 +27,7 @@
 
     <!-- Icon Font Stylesheet -->
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       rel="stylesheet"
     />
     <link
@@ -88,7 +88,7 @@
             class="d-flex flex-column h-100 text-center overflow-auto shadow"
           >
             <img
-              class="w-100 img-fluid mb-4"
+              class="w-100 img-fluid mb-4 profile-image"
               src="img/profile-bw.jpg"
               alt="Image"
             />
@@ -103,7 +103,7 @@
                 class="btn btn-primary btn-square mx-1"
                 href="https://twitter.com/rahuldotr"
                 target="_blank"
-                ><i class="fab fa-twitter"></i
+                ><i class="fab fa-x-twitter"></i
               ></a>
               <a
                 class="btn btn-primary btn-square mx-1"
@@ -131,7 +131,7 @@
               ></a>
             </div>
             <div
-              class="mb-3 pt-2 pl-2 pr-2 pb-2 d-flex align-items-end justify-content-between border-top border-bottom"
+              class="   mb-3 pt-2 pl-2 pr-2 pb-2 d-flex align-items-end justify-content-between border-top border-bottom border-start border-end"
             >
               <a href="img/cv.pdf" target="_blank" class="btn w-50 border-end"
                 >View CV</a
@@ -242,10 +242,11 @@
             id="skills"
           >
             <h1 class="title pb-3 mb-5">Skills</h1>
+            <i class="fa fa-3x fa-code text-primary mb-5"></i>
 
-            <div class="row">
+            <div class="row g-2">
               <div class="row g-2">
-                <div class="col-sm-6 col-sm-6 col-md-2 col-lg-6 col-xl-3">
+                <div class="col-sm-6 col-md-2 col-lg-6 col-xl-3">
                   <h5><li>Golang</li></h5>
                 </div>
                 <div class="col-sm-6 col-md-2 col-lg-6 col-xl-3">
@@ -313,6 +314,7 @@
             id="experience"
           >
             <h1 class="title pb-3 mb-5">Experiences</h1>
+            <i class="fa fa-3x fa-laptop-code text-primary mb-5"></i>
             <div class="border-start border-2 border-light pt-2 ps-5">
               <div class="position-relative mb-4">
                 <span
@@ -327,20 +329,20 @@
                   | <small>2020 - Present</small>
                 </p>
                 <p>
-                  Created CMS that enables users to create, edit, publish and
-                  store digital content. CMS screens are developed as web
-                  components and integrated into another Vue application.
+                    I have extensive experience in developing and managing scalable applications using Gin Gonic, 
+                    resulting in a significant 40% decrease in load time. 
+                    <p>
+                        Additionally, I collaborated on optimizing database queries and implementing indexing strategies, 
+                        leading to a remarkable 55% enhancement in application performance. Working with a 10-member team, 
+                        I contributed to the development of scalable Vue.js and Node.js applications. By implementing Python scripts for automation, 
+                        I achieved a notable 30% increase in task efficiency. Furthermore, I conducted code reviews, authored technical documentation, and provided guidance to junior developers. 
+                    </p>
+                    <p>
+                        My proficiency in troubleshooting and resolving intricate backend issues highlights my strong problem-solving skills in backend development. 
+                        I also practiced Safe Agile methodologies to ensure smooth project delivery through efficient collaboration with the team.
+                    </p>
                 </p>
-                <p>
-                  <b><u> Project: Nectar Console</u></b>
-                  <a
-                    >Frameworks used are Python Starlette and Vue.js (Nectar
-                    Console App used for checking API errors and bugs in
-                    websites linked with this App).</a
-                  >
-                  My contribution is to creating RESTful APIs and UI.
-                </p>
-                <p>Frameworks used: Vue JS, Node JS, Starlette</p>
+
               </div>
               <div class="position-relative mb-4">
                 <span
@@ -354,12 +356,164 @@
                   >
                   | <small>2019 - 2020 </small>
                 </p>
-                <p>Created APIs for CANKADO Website and Mobile Applications</p>
-                <p>Frameworks used: Django REST API</p>
+                <p>I proficiently resolved bugs and issues within the Django REST API framework, thereby contributing significantly to the enhancement of system stability and performance. 
+                    <p>
+                        Additionally, I developed automation scripts in Python aimed at optimizing task execution processes, thus improving overall efficiency.
+                    </p>
+                    <p>
+                        Furthermore, I streamlined CRUD (Create, Read, Update, Delete) API endpoints to ensure smoother data management operations.
+                    </p>
+                </p>
               </div>
             </div>
           </section>
           <!-- Expericence End -->
+
+
+          <!-- Projects Start -->
+          <section
+            class="py-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            id="experience"
+          >
+            <h1 class="title mb-5">Projects</h1>
+            <i class="fa fa-3x fa-terminal text-primary mb-5"></i>
+            <div class="border-start border-2 border-light pt-2 ps-5">
+              <div class="position-relative mb-4">
+                <span
+                  class="bi bi-arrow-right fs-4 text-light position-absolute"
+                  style="top: -5px; left: -50px"
+                ></span>
+                <h5 class="mb-1">Pixely Photobooth</h5>
+                <b class="mb-2 text-primary">
+                    Technologies: Golang and EdgeDB
+                  </b>
+                <p>
+                    <li class="pb-2 pt-2">
+                        Designed and implemented APIs for a photobooth product.
+                    </li>
+                    <li class="pb-2 pt-2">
+                        Integrated GoLang APIs seamlessly with EdgeDB database, ensuring data consistency and reliability.
+                    </li>
+                    <li class="pb-2 pt-2">
+                        Enhanced performance by 40% by developing high-performance endpoints using an asynchronous approach.
+                    </li>
+                    <li class="pb-2 pt-2">
+                        Developed packages to enhance code modularity and maintainability.
+                    </li>
+                    <li class="pb-2 pt-2">
+                        Implemented middleware functions for authentication, logging, and request handling within the Gin framework,
+ensuring security and scalability of APIs while adhering to industry best practices.
+                    </li>
+                    <li class="pb-2 pt-2">
+                        Implemented asynchronous tasks using goroutines to handle concurrent operations such as database queries,
+network requests, and data processing, enhancing API responsiveness and scalability.
+                    </li>
+                </p>
+
+              </div>
+              <div class="position-relative mb-4">
+                <span
+                  class="bi bi-arrow-right fs-4 text-light position-absolute"
+                  style="top: -5px; left: -50px"
+                ></span>
+                <h5 class="mb-1">Hummingbird Property Management System</h5>
+                <b class="mb-2 text-primary">
+                  Technologies : Node.js, Vue.js and MySQL
+                </b>
+
+                <p>
+                    <li class="pb-2 pt-2">
+                        Designed and implemented Node.js APIs for a Real Estate Domain Web App in the Self Storage industry across
+2 countries.
+                    </li>
+                    <li class="pb-2 pt-2">
+                        Spearheaded the development and successful integration of a Vue.js - powered CMS web application as
+webpack, streamlining the content management process and reducing publication time by 50%.
+                    </li>
+                    <li class="pb-2 pt-2">
+                        Enhanced performance by 40% by developing high-performance endpoints using an asynchronous approach.
+                    </li>
+                    <li class="pb-2 pt-2">
+                        Developed reusable Vue.js components to enhance code modularity and maintainability.
+                    </li>
+                    <li class="pb-2 pt-2">
+                        Implemented features such as On-boarding flow, Event bus communications etc. using Express.js and
+MySQL.
+                    </li>
+                    <li class="pb-2 pt-2">
+                        Developed optimized RESTful API endpoints in Node.js, implementing robust authorization for secure re-
+source access, conducting thorough JOI validations to enhance data integrity, and adhering to best practices
+for coding, documentation, and testing.
+                    </li>
+                </p>
+              </div>
+
+
+
+
+              <div class="position-relative mb-4">
+                <span
+                  class="bi bi-arrow-right fs-4 text-light position-absolute"
+                  style="top: -5px; left: -50px"
+                ></span>
+                <h5 class="mb-1">Nectar Console Web Application</h5>
+                <b class="mb-2 text-primary">
+                  Technologies : Vue.js
+                </b>
+
+                <p>
+                    <li class="pb-2 pt-2">
+                        Guided on creating a user-friendly web application to facilitate API endpoint testing from the front end,
+resulting in a 20% reduction in testing time.
+                    </li>
+                    <li class="pb-2 pt-2">
+                        Integrated third-party packages, including CodeMirror and AG Grid, enhancing application functionality by
+30%.
+                    </li>
+                    <li class="pb-2 pt-2">
+                        Collaborated with cross-functional teams, ensuring seamless integration and delivery of features on time, con-
+tributing to a 15% improvement in overall project efficiency.
+                    </li>
+                </p>
+              </div>
+
+
+
+              <div class="position-relative mb-4">
+                <span
+                  class="bi bi-arrow-right fs-4 text-light position-absolute"
+                  style="top: -5px; left: -50px"
+                ></span>
+                <h5 class="mb-1">URL Shortener</h5>
+                <b class="mb-2 text-primary">
+                  Technologies : Vue.js and Node.js
+                </b>
+
+                <p>
+                    <li class="pb-2 pt-2">
+                        Created a high-performance URL shortening project with Node.js/Express.js backend API and Vue.js/Vuetify
+frontend.
+                    </li>
+                    <li class="pb-2 pt-2">
+                        Implemented Dockerization for seamless deployment and scalability.
+                    </li>
+                    <li class="pb-2 pt-2">
+                        Integrated a MySQL database to efficiently manage URL data.
+                    </li>
+                    <li class="pb-2 pt-2">
+                        Built a user-friendly interface using Vue.js and Vuetify, enhancing the user experience for both URL shortening
+and retrieval.
+                    </li>
+                    <li class="pb-2 pt-2">
+                        Ensured a responsive and visually appealing design to accommodate various devices and screen sizes.
+                    </li>
+                </p>
+              </div>
+
+            </div>
+          </section>
+          <!-- Projects End -->
 
           <!-- Certifications Start -->
           <section
@@ -368,13 +522,15 @@
             id="certifications"
           >
             <h1 class="title pb-3 mb-5">Certifications</h1>
+            <i class="fa fa-3x fa-medal text-primary mb-5"></i>
+
             <div class="border-start border-2 border-light pt-2 ps-5">
               <div class="position-relative mb-4">
                 <span
                   class="bi bi-arrow-right fs-4 text-light position-absolute"
                   style="top: -5px; left: -50px"
                 ></span>
-                <h5 class="mb-1">Certified SAFe® 5 Practitioner</h5>
+                <h5 class="mb-1">Certified SAFe® 6 Practitioner</h5>
                 <p class="mb-2">
                   <a
                     href="https://www.credly.com/badges/005d38be-62d3-4d2d-bbba-5df62223bf67/"
@@ -383,7 +539,7 @@
                   >
                 </p>
                 <p>
-                  A Certified SAFe® 5 Practitioner (SP) is a SAFe team member
+                  A Certified SAFe® 6 Practitioner (SP) is a SAFe team member
                   professional responsible for using Scrum, Kanban, and XP in a
                   SAFe environment.
                 </p>
@@ -562,10 +718,10 @@
             id="portfolio"
             data-wow-delay="0.1s"
           >
-            <h1 class="title pb-3 mb-5">Portfolio</h1>
+            <h1 class="title pb-3 mb-5">Publications</h1>
             <div class="owl-carousel testimonial-carousel">
               <div class="text-left">
-                <i class="fa fa-3x fa-terminal text-primary mb-4"></i>
+                <i class="fa fa-3x fa-earth-americas text-primary mb-4"></i>
                 <p class="fs-4 mb-4">Published NPM Packages</p>
                 <div class="d-flex align-items-center">
                   <p>
@@ -586,6 +742,7 @@
           <!-- Contact Start -->
           <section class="py-5 wow fadeInUp" data-wow-delay="0.1s" id="contact">
             <h1 class="title pb-3 mb-5">Contact Me</h1>
+            <i class="fa fa-3x fa-comment-dots text-primary mb-4"></i>
             <div id="mail-status"></div>
             <form
               action="https://formcarry.com/s/nFJr6LCFcy"
@@ -660,7 +817,7 @@
                   class="btn btn-primary btn-square mx-1"
                   href="https://twitter.com/rahuldotr"
                   target="_blank"
-                  ><i class="fab fa-twitter"></i
+                  ><i class="fab fa-x-twitter"></i
                 ></a>
                 <a
                   class="btn btn-primary btn-square mx-1"
@@ -689,10 +846,10 @@
               </div>
               <div class="d-flex justify-content-center mb-3">
                 <a class="text-light px-3 border-end" href="#">About</a>
-                <a class="text-light px-3 border-end" href="#experience"
-                  >Experience</a
+                <a class="text-light px-3 border-end" href="#skills"
+                  >Skills</a
                 >
-                <a class="text-light px-3" href="#portfolio">Portfolio</a>
+                <a class="text-light px-3" href="#experience">Experience</a>
               </div>
 
               <p class="m-0">
