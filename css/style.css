@@ -251,3 +251,58 @@
   width: 100% !important;
   height: 55% !important; */
 }
+
+
+
+.linkedin-profile {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #313131;
+  border-radius: 8px;
+}
+
+.linkedin-profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile-info {
+  flex-grow: 1;
+}
+
+.profile-info h2 {
+  margin: 0;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.profile-info p {
+  margin: 0;
+  font-size: 1em;
+  color: #666;
+}
+
+.linkedin-button {
+  display: inline-block;
+  padding: 6px 45px;
+  background-color: #00B87B;
+  color: #ffffff;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.linkedin-button:hover {
+  background-color: #01d48e;
+  color: #ffffff;
+}
+
+.profile-info .linkedin-title {
+  margin: 5px 0;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #00B87B;
+}
