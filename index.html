@@ -48,12 +48,18 @@
   </head>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <script src="https://www.powr.io/powr.js?platform=html"></script>
 
   <script type="text/javascript">
     window.oncontextmenu = function () {
       return false;
     };
+    $(document).ready(function() {
+      $.getJSON('http://ip-api.com/json/', function (data) {
+          $('#ip-address').text(data.query);
+          $('#user-country').text(data.country);
+          $('#user-city').text(data.city);
+      });	
+    });
     $(document).keydown(function (event) {
       if (event.keyCode == 123) {
         return false;
@@ -826,12 +832,13 @@ and retrieval.
               <p class="m-0">
                 &copy; 2024 | <a href="https://www.instagram.com/rahuldotr" target="_blank">Rahul R</a>
               </p>
-
+              <div class="visitor-details">
+                <span>Visitor Details: </span><span id="ip-address"></span> | <span id="user-country"></span> | <span id="user-city"></span>
+              </div>
               <p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NoDerivatives 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"></a></p>            </div>
-              <div class="powr-visitor-counter" id="5a32f52c_1710732975"></div>
             </section>
-          <!-- Footer End -->
-        </div>
+            <!-- Footer End -->
+          </div>
       </div>
     </div>
 
