@@ -13,43 +13,49 @@
     <!-- Favicon -->
     <link href="img/favicon-1.ico" rel="icon" />
     
-    <link
-      href="https://fonts.googleapis.com/css?family=Dancing Script"
-      rel="stylesheet"
-    />
-
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
     <link href="lib/animate/animate.min.css" rel="stylesheet" />
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-
+    
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
   </head>
+  <link
+  href="https://fonts.googleapis.com/css?family=Dancing Script"
+  rel="stylesheet"
+  />
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/d4942b4f4c.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script type="text/javascript">
     window.oncontextmenu = function () {
       return false;
     };
-    $(document).ready(function() {
-      $.getJSON('https://api.ipify.org/?format=json', function (data) {
-          $('#ip-address').text(data.ip);
-      });	
+    document.addEventListener('DOMContentLoaded', function() {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://api.ipify.org/?format=json', true);
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var data = JSON.parse(xhr.responseText);
+          document.getElementById('ip-address').textContent = data.ip;
+        }
+      };
+      xhr.send();
     });
-    $(document).keydown(function (event) {
-      if (event.keyCode == 123) {
-        return false;
+
+    document.addEventListener('keydown', function(event) {
+      if (event.keyCode === 123) {
+        event.preventDefault();
       } else if (
-        (event.ctrlKey && event.shiftKey && event.keyCode == 73) ||
-        (event.ctrlKey && event.shiftKey && event.keyCode == 74) ||
-        (event.ctrlKey && event.keyCode == 85)
+        (event.ctrlKey && event.shiftKey && event.keyCode === 73) ||
+        (event.ctrlKey && event.shiftKey && event.keyCode === 74) ||
+        (event.ctrlKey && event.keyCode === 85)
       ) {
-        return false;
+        event.preventDefault();
       }
     });
+
   </script>
 
   <body>
