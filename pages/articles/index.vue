@@ -17,7 +17,7 @@ useSeoMeta({
   description,
 });
 
-const { data: articles } = await useAsyncData("projects-all", () =>
+const { data: articles } = await useAsyncData("articles-all", () =>
   queryContent("/articles").find()
 );
 </script>
