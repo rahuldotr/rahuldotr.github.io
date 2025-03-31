@@ -132,7 +132,7 @@ const submitForm = async () => {
         show: true,
         type: 'success',
         title: 'Message sent!',
-        message: 'Thank a megabyte! I will respond faster than a loop iterating through an array.'
+        message: 'Thanks a terabyte! I’ll respond faster than a loop through an array.'
       };
       
       form.value = {
