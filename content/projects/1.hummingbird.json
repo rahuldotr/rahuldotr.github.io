@@ -1,0 +1,8 @@
+{
+  "name": "Hummingbird Property Management System",
+  "url": "https://tenantinc.com",
+  "description": "Developed Node.js APIs for a Self Storage Real Estate Web App across 2 countries. Led Vue.js CMS integration, reducing publication time by 50%. Improved performance by 40% with asynchronous endpoints and built reusable components, secure RESTful APIs, and key features using Express.js and MySQL.",
+  "status": "Active",
+  "thumbnail": "/projects/hb.png",
+  "opensource": false
+}

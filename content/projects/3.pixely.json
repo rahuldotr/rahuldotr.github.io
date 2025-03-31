@@ -1,0 +1,7 @@
+{
+  "name": "Pixely Photobooth",
+  "url": "https://www.pixely.in/",
+  "description": "Developed APIs for Pixely Photobooth, integrating Go with EdgeDB for data consistency. Improved performance by 40% with asynchronous endpoints. Built reusable packages, implemented authentication and logging in the Gin framework, and leveraged goroutines for concurrent processing, enhancing API responsiveness. - Owned by Alokin",
+  "status": "Active",
+  "opensource": false
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Oh My Zsh",
+  "description": "It's an interactive Unix shell that can be used as a command interpreter for shell scripting. The benefits include command-line completion, shared history, improved globbing, intelligent tab completion, spelling correction, and a rich set of plugins and themes.",
+  "url": "https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH",
+  "category": "software"
+}

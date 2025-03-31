@@ -1,0 +1,8 @@
+{
+  "name": "URL Shortener",
+  "url": "https://github.com/rahuldotr/url-shortener",
+  "description": "Developed a high-performance URL shortening service with a Node.js/Express.js backend and Vue.js/Vuetify frontend. Implemented Dockerization for seamless deployment and scalability. Integrated MySQL for efficient URL management and built a responsive, user-friendly interface for easy URL shortening and retrieval.",
+  "thumbnail": "/projects/url-shortener.png",
+  "status": "Completed",
+  "opensource": false
+}
