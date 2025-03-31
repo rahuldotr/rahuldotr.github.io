@@ -5,9 +5,6 @@ on:
     branches:
       - master
 
-  # # Allow manual triggering
-  # workflow_dispatch:
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -27,11 +24,18 @@ jobs:
       - name: Build
         run: npm run generate
         env:
-          BASE_URL: /${{ github.event.repository.name }}/
+          # For username.github.io sites, use '/'
+          BASE_URL: '/'
+          # Add this to ensure proper static generation
+          NITRO_PRESET: 'github-pages'
+
+      # Create .nojekyll file to prevent Jekyll processing
+      - name: Add .nojekyll file
+        run: touch .output/public/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: .output/public  # The folder the action should deploy
-          branch: gh-pages  # The branch the action should deploy to
-          clean: true  # Automatically remove deleted files from the deploy branch
+          folder: .output/public
+          branch: gh-pages
+          clean: true
