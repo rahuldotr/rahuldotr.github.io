@@ -1,7 +1,7 @@
 export const useTelegram = () => {
     const sendNotification = async (message) => {
       try {
-        await fetch('https://telegram-notifications-6oevpg3vi-01cr4b-gmailcoms-projects.vercel.app/api/send-telegram', {
+        await fetch('https://https://telegram-bot-backend-qvzogc3y8-01cr4b-gmailcoms-projects.vercel.app/send-message', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ message })
