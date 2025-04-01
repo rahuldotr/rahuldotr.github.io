@@ -29,13 +29,13 @@ export const useTelegram = () => {
       }
       
       const message = `
-      <b>🔔 Action: ${actionName}!</b>
-      
-      <b>Device:</b> ${userAgent}
-      <b>Referrer:</b> ${referrer}
-      <b>Screen:</b> ${screenSize}
-      <b>Location:</b> ${ipInfo}
-      <b>Time:</b> ${new Date().toLocaleString()}
+      🔔 Action: ${actionName}!
+
+      Device: ${userAgent}
+      Referrer: ${referrer}
+      Screen: ${screenSize}
+      Location: ${ipInfo}
+      Time: ${new Date().toLocaleString()}
     `;
       
       return await sendNotification(message);
