@@ -1,0 +1,1 @@
+import{u as e}from"./index.Fbhj0bW1.js";import{c as t,b as o}from"./entry.CcN_jbVe.js";const s={class:"min-h-screen"},a="Some random experiments with UI I do in my free time.",_={__name:"lab",setup(n){return e({title:"Lab | Rahul R",description:a}),(r,c)=>(o(),t("main",s))}};export{_ as default};
