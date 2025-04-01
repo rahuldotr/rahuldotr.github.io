@@ -26,12 +26,16 @@
       to="resume.pdf"
       target="_blank"
       download
+      @click="sendVisitorActionNotification('Resume Downloaded')"
       icon="i-heroicons-document-arrow-down"
     />
   </div>
 </template>
 
 <script setup>
+import { useTelegram } from '~/composables/useTelegram';
+
+const { sendVisitorActionNotification } = useTelegram();
 useSeoMeta({
   title: "Rahul R",
   description:

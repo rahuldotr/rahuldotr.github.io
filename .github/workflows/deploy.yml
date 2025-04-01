@@ -24,10 +24,10 @@ jobs:
       - name: Build
         run: npm run generate
         env:
-          # For username.github.io sites, use '/'
           BASE_URL: '/'
-          # Add this to ensure proper static generation
           NITRO_PRESET: 'github-pages'
+          NUXT_PUBLIC_TELEGRAM_BOT_TOKEN: ${{ secrets.NUXT_PUBLIC_TELEGRAM_BOT_TOKEN }}
+          NUXT_PUBLIC_TELEGRAM_CHAT_ID: ${{ secrets.NUXT_PUBLIC_TELEGRAM_CHAT_ID }}
 
       # Create .nojekyll file to prevent Jekyll processing
       - name: Add .nojekyll file

@@ -8,6 +8,7 @@
         :to="link.url"
         target="_blank"
         external
+        @click="sendVisitorActionNotification(`Visited ${link.name}`)"
         class="flex items-end gap-4 dark:hover:text-gray-300 group"
       >
         <span class="text-sm">
@@ -23,6 +24,9 @@
 </template>
 
 <script lang="ts" setup>
+import { useTelegram } from '~/composables/useTelegram';
+const { sendVisitorActionNotification } = useTelegram();
+
 const links = [
   {
     name: "Instagram",

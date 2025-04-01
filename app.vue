@@ -25,3 +25,21 @@
   transform: translateY(5px);
 }
 </style>
+
+<script setup>
+import { onMounted } from 'vue';
+import { useCookie } from '#app';
+import { useTelegram } from '~/composables/useTelegram';
+
+onMounted(async () => {
+  const visitorCookie = useCookie('visitor-tracked');
+  
+  if (!visitorCookie.value) {
+    const { sendVisitorActionNotification } = useTelegram();
+    await sendVisitorActionNotification("New Visitor");
+    
+    visitorCookie.value = 'true';
+    document.cookie = `visitor-tracked=true; max-age=${60*60*24*30}; path=/; SameSite=Lax`;
+  }
+});
+</script>
