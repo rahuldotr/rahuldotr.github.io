@@ -30,7 +30,7 @@ export const useTelegram = () => {
       
       const message = `
       🔔🔔 Action: ${actionName}! 🔔🔔
-      ===============================================
+      =============================
       Device: ${userAgent}
       -----------------------------------------------
       Referrer: ${referrer}
