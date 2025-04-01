@@ -39,7 +39,7 @@ onMounted(async () => {
     await sendVisitorActionNotification("New Visitor");
     
     visitorCookie.value = 'true';
-    document.cookie = `visitor-tracked=true; max-age=${60*60*24*30}; path=/; SameSite=Lax`;
+    document.cookie = `visitor-tracked=true; max-age=${60*60*24}; path=/; SameSite=Lax`;
   }
 });
 </script>

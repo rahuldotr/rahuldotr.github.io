@@ -45,11 +45,5 @@ export default defineNuxtConfig({
     families: {
       Inter: [400, 500, 600, 700, 800, 900],
     },
-  },
-  runtimeConfig: {
-    TELEGRAM_BOT_TOKEN: process.env.TELEGRAM_BOT_TOKEN,
-    public: {
-      TELEGRAM_CHAT_ID: process.env.TELEGRAM_CHAT_ID
-    }
   }
 });
