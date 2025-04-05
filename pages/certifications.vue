@@ -24,6 +24,12 @@
   
   const achievements = [
     {
+      title: "Angular (Basic) Certificate - HackerRank",
+      date: "April 2025",
+      description: "HackerRank's Angular Basic Certification validates your knowledge of Angular fundamentals, components, templates, services, and routing.",
+      badge: "Certification"
+    },
+    {
       title: "HIPAA Associate (HIPAAA)",
       date: "June 2024",
       description: "U.S. Health Insurance Portability and Accountability Act (HIPAA)",
