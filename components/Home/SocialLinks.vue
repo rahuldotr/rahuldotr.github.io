@@ -50,7 +50,7 @@ const links = [
   },
   {
     name: "GitHub",
-    url: "https://github.rahulraghu.com",
+    url: "https://github.com/rahuldotr/",
     icon: "mdi:github",
   },
   {
