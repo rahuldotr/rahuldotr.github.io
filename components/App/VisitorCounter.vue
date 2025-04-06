@@ -12,7 +12,7 @@
     <p v-if="loading" class="text-xs mt-2 text-gray-500">Loading visitor count...</p>
     <p v-else-if="error" class="text-xs mt-2 text-red-500">{{ error }}</p>
     <p v-else class="text-xs mt-2 text-gray-500">
-      Last visited: {{ lastUpdated }}
+      Last visited user at: {{ lastUpdated }}
     </p>
   </div>
 </template>
