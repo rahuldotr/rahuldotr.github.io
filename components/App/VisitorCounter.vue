@@ -12,7 +12,7 @@
     <p v-if="loading" class="text-xs mt-2 text-gray-500">Loading visitor count...</p>
     <p v-else-if="error" class="text-xs mt-2 text-red-500">{{ error }}</p>
     <p v-else class="text-xs mt-2 text-gray-500">
-      Last visited user: {{ lastUpdated }}
+      Last visited: {{ lastUpdated }}
     </p>
   </div>
 </template>
@@ -31,27 +31,38 @@ const fetchVisitorCount = async () => {
   try {
     loading.value = true;
     error.value = null;
+
+    //get the last updated time
+    const infoResponse = await fetch('https://api.counterapi.dev/v1/rahulraghu.com/rahulraghu.com/');
     
-    const response = await fetch('https://api.counterapi.dev/v1/rahulraghu.com/rahulraghu.com/up');
-    
-    if (!response.ok) {
-      throw new Error(`API responded with status: ${response.status}`);
+    if (!infoResponse.ok) {
+      throw new Error(`Info API responded with status: ${infoResponse.status}`);
     }
     
-    const data = await response.json();
+    const infoData = await infoResponse.json();
     
-    visitorCount.value = data.count;
+    //get the current count and update it
+    const countResponse = await fetch('https://api.counterapi.dev/v1/rahulraghu.com/rahulraghu.com/up');
     
-    // Format date as DD/MM/YYYY, h:mm:ss AM/PM
-    const updatedDate = new Date(data.updated_at);
+    if (!countResponse.ok) {
+      throw new Error(`Count API responded with status: ${countResponse.status}`);
+    }
+    
+    const countData = await countResponse.json();
+    visitorCount.value = countData.count;
+  
+    
+    const updatedDate = new Date(infoData.updated_at);
     const day = String(updatedDate.getDate()).padStart(2, '0');
     const month = String(updatedDate.getMonth() + 1).padStart(2, '0');
     const year = updatedDate.getFullYear();
     const time = updatedDate.toLocaleTimeString('en-US');
     
     lastUpdated.value = `${day}/${month}/${year}, ${time}`;
-        
-    startCounter();
+    
+    if (targetIsVisible.value) {
+      startCounter();
+    }
   } catch (err) {
     console.error('Error fetching visitor count:', err);
     error.value = 'Failed to load visitor count';
