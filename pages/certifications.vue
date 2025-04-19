@@ -36,12 +36,6 @@
       badge: "Certification"
     },
     {
-      title: "Certified SAFe® 6 Practitioner",
-      date: 'March 2023',
-      description: "SAFe Agile 6.0 Practitioner Certification validates your expertise in Agile principles, SAFe framework, and Lean-Agile practices.",
-      badge: "Certification"
-    },
-    {
       title: "Go (Basic) Certificate - HackerRank",
       date: "March 2024",
       description: "HackerRank's Go Basic Certification validates your fundamental skills in Golang, covering syntax, functions, and concurrency.",
@@ -52,7 +46,13 @@
       date: 'March 2024',
       description: "HackerRank's Problem Solving (Basic) Certification validates your ability to solve programming problems effectively and efficiently.",
       badge: "Certification"
-    }
+    },
+    {
+      title: "Certified SAFe® 6 Practitioner",
+      date: 'March 2023',
+      description: "SAFe Agile 6.0 Practitioner Certification validates your expertise in Agile principles, SAFe framework, and Lean-Agile practices.",
+      badge: "Certification"
+    },
   ];
   </script>
   
