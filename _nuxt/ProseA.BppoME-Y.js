@@ -1,0 +1,1 @@
+import{d as o,I as n,b as s,w as f,M as p,A as _}from"./entry.BEDwTZ_8.js";const d=o({__name:"ProseA",props:{href:{type:String,default:""},target:{type:String,default:void 0,required:!1}},setup(t){const e=t;return(r,c)=>{const a=_;return s(),n(a,{href:e.href,target:e.target},{default:f(()=>[p(r.$slots,"default")]),_:3},8,["href","target"])}}});export{d as default};
